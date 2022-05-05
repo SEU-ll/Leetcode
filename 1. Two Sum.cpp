@@ -15,7 +15,7 @@ public:
         }
         return {};*/
         //哈希表求解两数之和，根据题目条件利用无序的map结构
-        unordered_map<int,int> map;//注意下面并没有把数组元素映射到map里，for循环开始的时候map里没有元素
+        unordered_map<int,int> map;//注意下面是逐步把数组元素映射到map里，for循环开始的时候map里没有元素
         for(int i = 0; i < nums.size(); i++){
             auto iter = map.find(target - nums[i]);
             if(iter != map.end()){//定义的容器指针第一次是不执行if语句的，因为容器里没有元素
